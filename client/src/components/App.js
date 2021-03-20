@@ -1,27 +1,27 @@
-import React from 'react'
-import Login from './Login'
-import useLocalStorage from '../hooks/useLocalStorage';
-import Dashboard from './Dashboard'
-import { ContactsProvider } from '../contexts/ContactsProvider'
-import { ConversationsProvider } from '../contexts/ConversationsProvider';
-import { SocketProvider } from '../contexts/SocketProvider';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./Login";
+import Chat from "./Chat";
+import ChatRoom from "./ChatRoom";
+import { SocketProvider } from "../contexts/SocketProvider";
 
 function App() {
-  const [id, setId] = useLocalStorage('id')
-
-  const dashboard = (
-    <SocketProvider id={id}>
-      <ContactsProvider>
-        <ConversationsProvider id={id}>
-          <Dashboard id={id} />
-        </ConversationsProvider>
-      </ContactsProvider>
-    </SocketProvider>
-  )
-
+  const id = 98765432107894560;
   return (
-    id ? dashboard : <Login onIdSubmit={setId} />
-  )
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Login />
+        </Route>
+        <Route path="/chat" exact>
+          <Chat />
+        </Route>
+        <Route path="/:id" exact>
+          <ChatRoom />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
