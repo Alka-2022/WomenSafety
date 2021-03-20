@@ -69,7 +69,7 @@ export default function ProfileScreen()
                             onChange={e=>setName(e.target.value)}/>
                         </div>
                         <div>
-                            <label htmlFor="email">Name</label>
+                            <label htmlFor="email">Email</label>
                             <input 
                             id="email"
                             type="email"
@@ -78,7 +78,7 @@ export default function ProfileScreen()
                             onChange={e=>setEmail(e.target.value)}/>
                         </div>
                         <div>
-                            <label htmlFor="password">Name</label>
+                            <label htmlFor="password">Password</label>
                             <input 
                             id="password"
                             type="password"
@@ -86,7 +86,7 @@ export default function ProfileScreen()
                             onChange={e=>setPassword(e.target.value)}/>
                         </div>
                         <div>
-                            <label htmlFor="vpassword">Name</label>
+                            <label htmlFor="vpassword">Confirm Password</label>
                             <input 
                             id="vpassword"
                             type="password"

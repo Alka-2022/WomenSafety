@@ -1,0 +1,25 @@
+.btn {
+    height: 80px;
+    width: 80px;  
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+  } 
+
+  .sos{
+    position: fixed;
+    right: 0;
+    background-color: red;
+  }
+  .add{
+    position: fixed;
+    right: 100px;
+    background-color: #03425f;
+
+  }

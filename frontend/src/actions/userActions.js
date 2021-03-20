@@ -35,6 +35,7 @@ export const register=(name,email,password)=>async(dispatch)=>{
     })
     .catch(err=>
     {
+        console.log(err);
         dispatch({type:USER_REGISTER_FAIL,payload:err.response && err.response.data.message 
         ? err.response.data.message
         : err.message});

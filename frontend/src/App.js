@@ -21,7 +21,7 @@ function App() {
       <div className="grid-container">
       <header className="row">
         <div>
-          <Link className="brand" to="/">SOS DEVSPACE-2K21</Link>
+          <Link className="brand" to="/">SOS DEVSPACE</Link>
         </div>
         <div>
           {
@@ -32,14 +32,17 @@ function App() {
                    <i className="fa fa-caret-down"></i>
                    </Link>
                    <ul className="dropdown-content">
-                   <li>
-                      <Link to="/profile">Profile</Link>
-                    </li>
                     <li>
-                      <Link to="#signout" onClick={signoutHandler}>
-                        Sign Out
-                      </Link>
-                    </li>
+                        <Link to="/profile">Profile</Link>
+                      </li>
+                      <li>
+                        <Link to="/sosGlobal">SOS Config</Link>
+                      </li>
+                      <li>
+                        <Link to="#signout" onClick={signoutHandler}>
+                          Sign Out
+                        </Link>
+                      </li>
                    </ul>
               </div>
             ):
@@ -54,7 +57,7 @@ function App() {
       <Route path="/signin" component={SigninScreen} />
       <Route path="/register" component={RegisterScreen} /> 
       </main>
-      <footer className="row center">All right reserved</footer>
+      <footer className="row center">&copy; WomenSafety DEVSPACE 2k21</footer>
     </div>
    </BrowserRouter>
   );

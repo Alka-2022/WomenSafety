@@ -5,6 +5,7 @@ const initialState={
      userSignin:{
         userInfo:localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null,
     },
+
 };
 const reducer=combineReducers({
     userSignin:userSigninReducer,
